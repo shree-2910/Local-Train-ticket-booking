@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Train Booking</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Flash messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %}
+    <div class="flash-container">
+      {% for category, message in messages %}
+      <div class="flash {{ category }}">{{ message }}</div>
+      {% endfor %}
+    </div>
+    {% endif %} {% endwith %}
+
+    <div class="hero">
+      <div class="content">
+        <h1 class="glow">🚆 Local Train Ticket Booking</h1>
+        <p class="subtitle">
+          Book your local tickets fast, easy & valid for 24 hours!
+        </p>
+        <div class="buttons">
+          <a href="{{ url_for('login') }}" class="btn primary">Login</a>
+          <a href="{{ url_for('register') }}" class="btn secondary">Register</a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Made with ❤️ for commuters</p>
+    </footer>
+  </body>
+</html>
