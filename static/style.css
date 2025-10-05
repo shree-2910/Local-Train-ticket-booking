@@ -1,0 +1,203 @@
+/* Reset and base setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Hero section */
+.hero {
+  background: linear-gradient(to bottom right, #1b2735, #090a0f);
+  background-image: url('https://images.unsplash.com/photo-1581092921461-eab62a8a1a46?auto=format&fit=crop&w=1500&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Main content */
+.content {
+  position: relative;
+  color: white;
+  text-align: center;
+  z-index: 2;
+  animation: fadeIn 2s ease-in;
+}
+
+.glow {
+  font-size: 2.8rem;
+  font-weight: 600;
+  text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff;
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #e3e3e3;
+  animation: slideUp 1.5s ease-in-out;
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 30px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.btn.primary {
+  background: #00b4d8;
+  color: #fff;
+  box-shadow: 0 0 10px #00b4d8;
+}
+
+.btn.primary:hover {
+  background: #0096c7;
+  box-shadow: 0 0 20px #00b4d8;
+}
+
+.btn.secondary {
+  background: #3ddc97;
+  color: #fff;
+  box-shadow: 0 0 10px #3ddc97;
+}
+
+.btn.secondary:hover {
+  background: #2bb573;
+  box-shadow: 0 0 20px #3ddc97;
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Register Page Styling */
+.register-container {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(to right, #090a0f, #1b2735);
+  color: white;
+}
+
+.register-image {
+  flex: 1;
+  background: url('https://images.pexels.com/photos/72594/japan-train-railroad-railway-72594.jpeg?_gl=1*xcn8n3*_ga*OTQ3MDgwOTM4LjE3NTk2NDM0OTI.*_ga_8JE65Q40S6*czE3NTk2NDM0OTEkbzEkZzEkdDE3NTk2NDM0OTgkajUzJGwwJGgw');
+}
+
+.register-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.register-form h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 0 0 10px #00d4ff;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #222;
+  color: white;
+  transition: all 0.3s;
+}
+
+.input-group input:focus {
+  background: #333;
+  box-shadow: 0 0 8px #00d4ff;
+}
+
+.register-form button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 50px;
+  border: none;
+  background: #00b4d8;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-form button:hover {
+  background: #0096c7;
+  box-shadow: 0 0 15px #00b4d8;
+}
+
+.login-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.login-link a {
+  color: #00d4ff;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
